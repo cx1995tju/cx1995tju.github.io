@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>logos</title>
+<link href="/static/css/logos.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/static/js/logos.js"></script>
+
+<style type="text/css">
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+</style>
+
+</head>
+<body>
+<ul class="nav-ul">
+  <li class="nav-li"><a onclick='location.assign("https://c3po.byted.org/")'>c3po</a></li>
+  <!-- <li><a onclick='location.assign("https://vnet.byted.org/search")'>vnet</a></li> -->
+  <li class="nav-li">
+	<div class="dropdown">
+		<a> test </a>
+			<div class="dropdown-content">
+			    <a href="http://www.runoob.com">菜鸟教程 1</a>
+			    <a href="http://www.runoob.com">菜鸟教程 2</a>
+			    <a href="http://www.runoob.com">菜鸟教程 3</a>
+			</div>
+	</div>
+  </li>
+
+  <li id="li-search">
+	<div class="search">
+	<input placeholder="Date" id="date" type="text" list="time" style="width:250px;height:25px">
+	<datalist id="time">
+	    <option value="now">now</option>
+	    <option value="5m-ago">5m-ago</option>
+	    <option value="3h-ago">3h-ago</option>
+	    <option value="1d-ago">1d-ago</option>
+	    <option value="1d1h1m-ago">1d1h1m-ago</option>
+	    <option value="1d1h1m-after">1d1h1m-after</option>
+	    <option value="1d1h1m30s-after">1d1h1m30s-after</option>
+	</datalist>
+	</div>
+  </li>
+</ul>
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div id="logo">
+	<img id="img_logo" src="/img/logos.png" width="100px" height="100px">
+	<br />
+	<br />
+	<br />
+</div>
+
+<div id="inputs">
+	<!-- <input placeholder="IP" type="search" id="ip" style="width:250px;height:30px" onsearch="showDatapath()"/> -->
+	<input placeholder="ID or IP" type="search" id="ip" style="width:250px;height:30px" onsearch="logosMux()"/>
+	<input type="submit" value="logos 一下" style="height:30px" onclick="logosMux()"/>
+</div>
+<br />
+<br />
+<br />
+
+<div id="contents">
+	<p id="content"> </p>
+</div>
+
+</body>
+</html>
