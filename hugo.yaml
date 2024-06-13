@@ -1,0 +1,14 @@
+baseURL: 'https://cx1995tju.github.io'
+languageCode: 'en-us'
+title: 'cx blog'
+
+theme: 'PaperMod'
+
+params:
+  author: 'cx'
+  description: 'This is my blog'
+
+outputs:
+  home:
+    - 'HTML'
+    - 'RSS'
