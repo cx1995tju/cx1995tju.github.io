@@ -2,8 +2,10 @@ baseURL: 'cx1995tju.github.io'
 
 theme: PaperMod
 
+sectionPagesMenu: main
+
 hasCJKLanguage: true
-defaultContentLanguage: zh
+defaultContentLanguage: en
 defaultContentLanguageInSubdir: true
 
 languages:
@@ -15,19 +17,22 @@ languages:
     weight: 1
     permalinks:
       page:
-        /: /:year/:month/:filename/
+        /: /:filename/
         posts: /articles/:year/:month/:filename/
-    title: Lemint的博客
+    title: Lemint 的博客
     menus:
       main:
-      - name: 主页
-        pageRef: /
-        weight: 10
-      - name: 测试
+      - name: 搜索
+        pageRef: /search/
+        weight: 30
+      - name: 归档
+        pageRef: /archives/
+        weight: 40
+      - name: lemint
         params:
           rel: external
         url: https://bwg.lemint.xyz
-        weight: 20
+        weight: 50
   en:
     disabled: false
     contentDir: content/en
@@ -36,25 +41,40 @@ languages:
     weight: 2
     permalinks:
       page:
-        /: /:year/:month/:filename/
+        /: /:filename/
         posts: /articles/:year/:month/:filename/
     title: Lemint's blog
     menus:
       main:
-      - name: Home
-        pageRef: /
-        weight: 10
-      - name: Test
+      - name: search
+        pageRef: /search/
+        weight: 30
+      - name: archive
+        pageRef: /archives/
+        weight: 40
+      - name: lemint
         params:
           rel: external
         url: https://bwg.lemint.xyz
-        weight: 20
+        weight: 50
 
 params:
   author: 'Lemint'
   description: 'This is my blog'
+  defaultTheme: auto
+  homeInfoParams:
+      Title: Hello World
+      Content: Creating the fun
+  socialIcons: # optional
+    - name: "github"
+      url: "https://www.github.com/cx1995tju"
+    - name: "email"
+      url: cx1995tju@gmail.com
+  ShowReadingTime: true
+  ShowToc: true
 
 outputs:
   home:
     - 'HTML'
     - 'RSS'
+    - 'JSON'
