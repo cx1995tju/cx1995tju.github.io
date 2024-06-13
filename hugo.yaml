@@ -1,11 +1,57 @@
-baseURL: 'https://cx1995tju.github.io'
-languageCode: 'en-us'
-title: 'cx blog'
+baseURL: 'cx1995tju.github.io'
 
-theme: 'PaperMod'
+theme: PaperMod
+
+hasCJKLanguage: true
+defaultContentLanguage: zh
+defaultContentLanguageInSubdir: true
+
+languages:
+  zh:
+    disabled: false
+    contentDir: content/zh
+    languageCode: zh-Hans
+    languageName: 中文
+    weight: 1
+    permalinks:
+      page:
+        /: /:year/:month/:filename/
+        posts: /articles/:year/:month/:filename/
+    title: Lemint的博客
+    menus:
+      main:
+      - name: 主页
+        pageRef: /
+        weight: 10
+      - name: 测试
+        params:
+          rel: external
+        url: https://bwg.lemint.xyz
+        weight: 20
+  en:
+    disabled: false
+    contentDir: content/en
+    languageName: English
+    languageCode: en-us
+    weight: 2
+    permalinks:
+      page:
+        /: /:year/:month/:filename/
+        posts: /articles/:year/:month/:filename/
+    title: Lemint's blog
+    menus:
+      main:
+      - name: Home
+        pageRef: /
+        weight: 10
+      - name: Test
+        params:
+          rel: external
+        url: https://bwg.lemint.xyz
+        weight: 20
 
 params:
-  author: 'cx'
+  author: 'Lemint'
   description: 'This is my blog'
 
 outputs:
