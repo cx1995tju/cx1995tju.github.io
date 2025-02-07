@@ -31,7 +31,7 @@ languages:
       - name: lemint
         params:
           rel: external
-        url: https://bwg.lemint.xyz
+        url: https://bwg.lemint.top
         weight: 50
   en:
     disabled: false
@@ -55,7 +55,7 @@ languages:
       - name: lemint
         params:
           rel: external
-        url: https://bwg.lemint.xyz
+        url: https://bwg.lemint.top
         weight: 50
 
 params:
